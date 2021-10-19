@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="my_images" path="Android/data/com.example.riverdetection/files/pictures" />
+</paths>
+
+
+<!--
+<paths>
+    <external-path name="external" path="Android/data/com.example.riverdetection/files/pictures" />
+    <external-files-path name="external_files" path="Android/data/com.example.riverdetection/files/pictures" />
+    <cache-path name="cache" path="Android/data/com.example.riverdetection/files/pictures" />
+    <external-cache-path name="external_cache" path="Android/data/com.example.riverdetection/files/pictures" />
+    <files-path name="files" path="Android/data/com.example.riverdetection/files/pictures" />
+</paths>
+-->

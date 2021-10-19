@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">River Detection</string>
+    <string name="detect">Detect</string>
+    <string name="picture">Take a Picture</string>
+    <string name="back">Back</string>
+    <string name="galery">From Galery</string>
+    <string name="backGa">Back</string>
+    <string name="backBtn">BB</string>
+    <string name="pickPic">Select</string>
+    <string name="predict">Predict</string>
+    <string name="shot">Foto</string>
+    <string name="save">Save</string>
+
+</resources>
