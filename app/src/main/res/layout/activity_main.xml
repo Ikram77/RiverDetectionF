@@ -7,26 +7,29 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="550dp"
+        android:layout_marginBottom="184dp"
         android:background="@drawable/ic_wave"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/detect"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="250dp"
-        android:text="@string/detect"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        android:background="@drawable/shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/detect"
+            android:layout_width="199dp"
+            android:layout_height="195dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/shape"
+            android:text="@string/detect"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
