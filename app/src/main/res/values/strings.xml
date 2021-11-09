@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">River Detection</string>
     <string name="detect">Detect</string>
-    <string name="picture">Take a Picture</string>
+    <string name="picture">Camera</string>
     <string name="back">Back</string>
-    <string name="galery">Start Detect</string>
+    <string name="galery">Galery</string>
     <string name="backGa">Back</string>
     <string name="backBtn">BB</string>
     <string name="pickPic">Select</string>

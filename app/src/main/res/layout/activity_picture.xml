@@ -8,10 +8,10 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"
-        android:layout_width="431dp"
-        android:layout_height="461dp"
+        android:layout_width="408dp"
+        android:layout_height="557dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="180dp"
         android:background="@drawable/ic_wave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,20 +19,34 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="234dp"
+            android:layout_height="229dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="-6dp" />
+            android:layout_marginTop="168dp"
+            android:layout_marginEnd="89dp"
+            android:src="@drawable/kamera" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="279dp"
+            android:layout_height="115dp"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="69dp"
+            android:text="Ambil Gambar ..."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
 
     </RelativeLayout>
 
     <Button
         android:id="@+id/backKamera"
-        android:layout_width="100dp"
+        android:layout_width="111dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginEnd="160dp"
         android:layout_marginBottom="44dp"
         android:background="@drawable/shape2"
         android:text="@string/backGa"
@@ -40,48 +54,35 @@
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/getImage"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/shape"
         android:text="@string/shot"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/saveImage"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <Button
-        android:id="@+id/saveImage"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="168dp"
-        android:background="@drawable/shape"
-        android:text="@string/save"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/detectImage"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/detectImage"
-        android:layout_width="320dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/shape"
         android:text="@string/detect"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.riverdetection.ml.Model;
 
 import org.tensorflow.lite.DataType;
@@ -49,6 +50,7 @@ public class PageGalery extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
                 startActivityForResult(intent, 100);
+                v.startAnimation(buttonEfect);
             }
         });
 
@@ -56,7 +58,6 @@ public class PageGalery extends AppCompatActivity {
             intent = new Intent(PageGalery.this, SecondActivity.class);
             startActivity(intent);
             v.startAnimation(buttonEfect);
-            finish();
         });
 
         detectImage.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +66,8 @@ public class PageGalery extends AppCompatActivity {
                 bitmap = Bitmap.createScaledBitmap(bitmap, 224, 224, true);
                 try {
                     Model model = Model.newInstance(getApplicationContext());
-                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.UINT8);
+                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3},
+                            DataType.UINT8);
 
                     TensorImage tensorImage = new TensorImage(DataType.UINT8);
                     tensorImage.load(bitmap);
@@ -78,8 +80,9 @@ public class PageGalery extends AppCompatActivity {
 
                     float total = 256;
                     textView.setText(
-                             ("Persentase\nBersih   :  "+(100 * outputFeature0.getFloatArray()[0]) / total) +"%"+
-                            "\n"+"Kotor     :  "+((100 * outputFeature0.getFloatArray()[1]) / total)+"%"
+                             ("Persentase\nBersih   :  "+(100 * outputFeature0.getFloatArray()[0]) / total)
+                                     +"%"+ "\n"+"Kotor     :  " +
+                                     ""+((100 * outputFeature0.getFloatArray()[1]) / total)+"%"
                      );
                 } catch (IOException e) {
                     // TODO Handle the exception
@@ -103,5 +106,6 @@ public class PageGalery extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
     }
 }
